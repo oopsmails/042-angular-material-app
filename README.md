@@ -36,8 +36,39 @@ http://localhost:4200/
 
 ```
 
+## Expanding the Project
+
+ng g module inline-datepicker
+
+ng g c inline-datepicker/inline-datepicker
+
+ng g module core
+
+ng g c core/components/home
+
+ng g module example
+ng g c components/example-home
+
+ng g module sandbox
+
+cd /c/sharing/github/angular-material-app/src/app/sandbox
+ng g c components/sandbox-home
+ng g module datatable
+cd datatable   // /c/sharing/github/angular-material-app/src/app/sandbox/datatable
+ng g c components/inline-datepicker
+
 
 ## Trouble Shooting
+
+### Routing, cannot find page
+
+```
+    CoreModule,
+    ExampleModule,
+    SandboxModule,
+    AppRoutingModule <---------------------- has to be AFTER all modules!!!
+
+```
 
 ### Cannot find module '@angular/material-moment-adapter' or its corresponding type declarations.ts(2307)
 

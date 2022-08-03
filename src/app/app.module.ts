@@ -1,3 +1,5 @@
+import { SandboxModule } from './sandbox/sandbox.module';
+import { ExampleModule } from './example/example.module';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatTableModule } from '@angular/material/table';
@@ -9,6 +11,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatDatepickerModule,
     MatFormFieldModule,
     MatInputModule,
-    MatMomentDateModule
+    MatMomentDateModule,
+
+    CoreModule,
+    ExampleModule,
+    SandboxModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
