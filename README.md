@@ -58,6 +58,7 @@ cd datatable   // /c/sharing/github/angular-material-app/src/app/sandbox/datatab
 ng g c components/inline-datepicker
 
 
+
 ## Trouble Shooting
 
 ### Routing, cannot find page
@@ -69,6 +70,47 @@ ng g c components/inline-datepicker
     AppRoutingModule <---------------------- has to be AFTER all modules!!!
 
 ```
+
+### error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+
+font-awesome related errors:
+
+> package.json
+
+- not needed
+
+```
+npm i font-awesome --save
+"font-awesome": "^4.7.0",
+```
+
+- one *ng add* is ok
+
+```
+ng add @fortawesome/angular-fontawesome@0.11.0
+
+"@fortawesome/angular-fontawesome": "^0.11.0",
+"@fortawesome/fontawesome-svg-core": "^6.1.1",
+"@fortawesome/free-solid-svg-icons": "^6.1.2",
+"@fortawesome/free-brands-svg-icons": "^6.1.2",
+"@fortawesome/free-regular-svg-icons": "^6.1.2",
+```
+
+- old versions
+- 
+```
+"@fortawesome/angular-fontawesome": "^0.9.0",
+"@fortawesome/fontawesome-svg-core": "^1.2.36",
+"@fortawesome/free-brands-svg-icons": "^5.15.4",
+"@fortawesome/free-regular-svg-icons": "^5.15.4",
+"@fortawesome/free-solid-svg-icons": "^5.15.4",
+```
+
+> FontAwesomeModule need to be imported in core.module.ts
+
+### TS2307: Cannot find module '@fortawesome/free-solid-svg-icons' or its corresponding type declarations
+
+npm i --save @fortawesome/free-solid-svg-icons
 
 ### Cannot find module '@angular/material-moment-adapter' or its corresponding type declarations.ts(2307)
 

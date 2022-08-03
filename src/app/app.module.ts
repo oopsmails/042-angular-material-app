@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 @NgModule({
   declarations: [
@@ -29,6 +30,8 @@ import { CoreModule } from './core/core.module';
     MatFormFieldModule,
     MatInputModule,
     MatMomentDateModule,
+
+    FontAwesomeModule,
 
     CoreModule,
     ExampleModule,
