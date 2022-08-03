@@ -56,7 +56,8 @@ ng g c components/sandbox-home
 ng g module datatable
 cd datatable   // /c/sharing/github/angular-material-app/src/app/sandbox/datatable
 ng g c components/inline-datepicker
-
+ng g c components/dialog-edit
+ng generate component components/dialog-box
 
 
 ## Trouble Shooting
@@ -107,6 +108,10 @@ ng add @fortawesome/angular-fontawesome@0.11.0
 ```
 
 > FontAwesomeModule need to be imported in core.module.ts
+
+### NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'
+
+- Should import *FormsModule* on *app.module.ts* - *import { FormsModule } from "@angular/forms"*
 
 ### TS2307: Cannot find module '@fortawesome/free-solid-svg-icons' or its corresponding type declarations
 
@@ -219,7 +224,15 @@ Note: All properties from the ValidProps list must be present when assigning the
 
 ## Refs:
 
-- https://www.freakyjolly.com/angular-material-table-inline-datepicker-edit-mode-tutorial/
+> Angular Material 13 Table Inline Datepicker Edit Mode Tutorial
+
+https://www.freakyjolly.com/angular-material-table-inline-datepicker-edit-mode-tutorial/
+
+> Angular 10|9|8 Edit/ Add/ Delete Rows in Material Table with using Dialogs inline Row Operation
+
+https://www.freakyjolly.com/angular-material-table-operations-using-dialog/
+
+> Other
 
 - https://stackoverflow.com/questions/56833469/typescript-error-ts7053-element-implicitly-has-an-any-type
 

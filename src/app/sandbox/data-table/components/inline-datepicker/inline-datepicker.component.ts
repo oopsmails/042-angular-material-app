@@ -70,7 +70,7 @@ export class InlineDatepickerComponent implements OnInit {
   tableFromGroup!: FormGroup;
   controlOffset: number = 0;
   // controlIndex = {};
-  controlIndex: Record<string, any>  = {};
+  controlIndex: Record<string, any> = {};
   isEditMode = false;
   fcm = ''; //formControlMapKey
 
