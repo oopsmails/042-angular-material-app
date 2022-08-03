@@ -1,7 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-
-import { MatTable } from '@angular/material/table';
+import { Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatTable } from '@angular/material/table';
 import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
 
 export interface UsersData {

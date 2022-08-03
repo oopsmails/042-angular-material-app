@@ -228,9 +228,25 @@ Note: All properties from the ValidProps list must be present when assigning the
 
 https://www.freakyjolly.com/angular-material-table-inline-datepicker-edit-mode-tutorial/
 
+ng g c components/inline-datepicker
+
+
 > Angular 10|9|8 Edit/ Add/ Delete Rows in Material Table with using Dialogs inline Row Operation
 
 https://www.freakyjolly.com/angular-material-table-operations-using-dialog/
+
+ng g c components/dialog-edit
+
+> Create an Editable Dynamic Table using Angular Material
+
+https://muhimasri.com/blogs/create-an-editable-dynamic-table-using-angular-material/  
+
+https://muhimasri.com/blogs/add-and-remove-table-rows-using-angular-material/  
+
+```
+ng g c components/dyna-table
+ng g c components/confirm-dialog
+```
 
 > Other
 
