@@ -17,7 +17,7 @@ const ELEMENT_DATA: UsersData[] = [
 @Component({
   selector: 'app-dialog-edit',
   templateUrl: './dialog-edit.component.html',
-  styleUrls: ['./dialog-edit.component.css']
+  styleUrls: ['./dialog-edit.component.scss']
 })
 export class DialogEditComponent {
 
