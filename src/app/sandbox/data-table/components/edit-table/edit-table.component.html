@@ -1,55 +1,64 @@
-<article class="table-header">
-    <button class="button-remove-rows" mat-button (click)="removeSelectedRows()">
-        Remove Rows
-    </button>
-    <button class="button-add-row" mat-button (click)="addRow()">Add Row</button>
+<article class="page-content page-b7">
+    <div class="page-content__header">
+        <h1>EdiTable</h1>
+    </div>
+    <p class="page-content__description">
+        Did you write the book of love and do you have faith in God above if the Bible tells you so? Now, do you believe
+        in rock 'n' roll? Can music save your mortal soul? And can you teach me how to dance real slow? Well, I know
+        that you're in love with him 'cause I saw you dancin' in the gym. You both kicked off your shoes. Man, I dig
+        those rhythm and blues. I was a lonely teenage bronckin' buck with a pink carnation and a pickup truck but I
+        knew I was out of luck. The day the music died.
+    </p>
+    <div class="mt-5">
+        <mat-drawer-container class="modhyobitto-table-drawer-container">
+            <mat-drawer mode="over" position="end" #table_update_drawer [opened]="is_table_being_updated"
+                disableClose="true">
+                <section class="table-update">
+                    <form class="table-update__form" [formGroup]="table_update_form" (ngSubmit)="updateTableData()">
+                        <header class="table-update__header">
+                            <h2 class="h3">{{is_new_row_being_added? 'Add New' : 'Edit'}} Row</h2>
+                        </header>
+                        <div class="table-update__fields">
+                            <div class="row">
+                                <div class="col-6">
+                                    <app-modhyobitto-form-field [parent_FG]="table_update_form" control_name="a"
+                                        label="Column A">
+                                    </app-modhyobitto-form-field>
+                                </div>
+                                <div class="col-6">
+                                    <app-modhyobitto-form-field [parent_FG]="table_update_form" control_name="c"
+                                        label="Column C">
+                                    </app-modhyobitto-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <app-modhyobitto-form-field [parent_FG]="table_update_form" control_name="b"
+                                        label="Column B">
+                                    </app-modhyobitto-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="table-update__footer">
+                            <div class="row flex-column-reverse flex-sm-row">
+                                <div class="col-12 col-sm-6">
+                                    <button matRipple class="secondary-button mt-3 mt-sm-0" type="button"
+                                        (click)="is_table_being_updated = false">Dismiss</button>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <button matRipple class="primary-button" type="submit"
+                                        [disabled]="!table_update_form.valid">Save</button>
+                                </div>
+                            </div>
+                        </footer>
+                    </form>
+                </section>
+            </mat-drawer>
+            <mat-drawer-content>
+                <app-modhyobitto-table [table_config]="table_config" (onRowAdd)="addNewRow()"
+                    (onRowEdit)="editRow($event)">
+                </app-modhyobitto-table>
+            </mat-drawer-content>
+        </mat-drawer-container>
+    </div>
 </article>
-<table mat-table [dataSource]="dataSource">
-    <ng-container [matColumnDef]="col.key" *ngFor="let col of columnsSchema">
-        <th mat-header-cell *matHeaderCellDef>
-            {{ col.label }}
-        </th>
-        <td mat-cell *matCellDef="let element">
-            <div [ngSwitch]="col.type" *ngIf="!element.isEdit">
-                <ng-container *ngSwitchCase="'isSelected'">
-                    <mat-checkbox (change)="element.isSelected = $event.checked"></mat-checkbox>
-                </ng-container>
-                <div class="btn-edit" *ngSwitchCase="'isEdit'">
-                    <button mat-button (click)="element.isEdit = !element.isEdit">
-                        Edit
-                    </button>
-                    <button mat-button class="button-remove" (click)="removeRow(element.id)">
-                        Delete
-                    </button>
-                </div>
-                <span *ngSwitchCase="'date'">
-                    {{ element[col.key] | date: 'mediumDate' }}
-                </span>
-                <span *ngSwitchDefault>
-                    {{ element[col.key] }}
-                </span>
-            </div>
-            <div [ngSwitch]="col.type" *ngIf="element.isEdit">
-                <div *ngSwitchCase="'isSelected'"></div>
-                <div class="btn-edit" *ngSwitchCase="'isEdit'">
-                    <button mat-button (click)="editRow(element)" [disabled]="disableSubmit(element.id)">
-                        Done
-                    </button>
-                </div>
-                <mat-form-field class="form-input" *ngSwitchCase="'date'" appearance="fill">
-                    <mat-label>Choose a date</mat-label>
-                    <input matInput [matDatepicker]="picker" [(ngModel)]="element[col.key]" />
-                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>
-                </mat-form-field>
-                <mat-form-field class="form-input" *ngSwitchDefault>
-                    <input [required]="col.required ? col.required : false"
-                        [pattern]="col.pattern ? col.pattern : '(.*)'" [type]="col.type" matInput
-                        [(ngModel)]="element[col.key]" (change)="inputHandler($event, element.id, col.key)" />
-                </mat-form-field>
-            </div>
-        </td>
-    </ng-container>
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-</table>
