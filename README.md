@@ -54,7 +54,7 @@ ng g module sandbox
 cd /c/sharing/github/angular-material-app/src/app/sandbox
 ng g c components/sandbox-home
 ng g module datatable
-cd datatable   // /c/sharing/github/angular-material-app/src/app/sandbox/datatable
+cd datatable   // /c/sharing/github/angular-material-app/src/app/sandbox/data-table
 ng g c components/inline-datepicker
 ng g c components/dialog-edit
 ng generate component components/dialog-box
@@ -224,6 +224,10 @@ Note: All properties from the ValidProps list must be present when assigning the
 
 ## Refs:
 
+### Angular Material Data Table
+
+cd /c/sharing/github/angular-material-app/src/app/sandbox/data-table
+
 > Angular Material 13 Table Inline Datepicker Edit Mode Tutorial
 
 https://www.freakyjolly.com/angular-material-table-inline-datepicker-edit-mode-tutorial/
@@ -231,11 +235,19 @@ https://www.freakyjolly.com/angular-material-table-inline-datepicker-edit-mode-t
 ng g c components/inline-datepicker
 
 
+![inline date picker](README-img\data-table\Angular-Material-Table-Inline-Edit-datePicker.gif)
+
 > Angular 10|9|8 Edit/ Add/ Delete Rows in Material Table with using Dialogs inline Row Operation
 
 https://www.freakyjolly.com/angular-material-table-operations-using-dialog/
 
-ng g c components/dialog-edit
+```
+ng g c components/dialog-edit  
+ng g c components/dialog-box
+```
+
+![edit using dialog](README-img\data-table\angular-material-table-row-add-update-delete-using-dialog-example.gif)
+
 
 > Create an Editable Dynamic Table using Angular Material
 
@@ -247,6 +259,16 @@ https://muhimasri.com/blogs/add-and-remove-table-rows-using-angular-material/
 ng g c components/dyna-table
 ng g c components/confirm-dialog
 ```
+
+![inline edit](README-img/data-table/angular-material-dyna-table.png)
+
+> EdiTable — An editable table using Angular Material
+
+https://owrrpon.medium.com/editable-an-editable-table-using-angular-material-7a4c4210bb71
+
+ng g c components/edit-table
+
+![EdiTable](README-img/data-table/EdiTable.gif)
 
 > Other
 

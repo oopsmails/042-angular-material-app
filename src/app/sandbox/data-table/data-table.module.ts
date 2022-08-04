@@ -16,6 +16,7 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
 import { DialogBoxComponent } from './components/dialog-box/dialog-box.component';
 import { DialogEditComponent } from './components/dialog-edit/dialog-edit.component';
 import { DynaTableComponent } from './components/dyna-table/dyna-table.component';
+import { EditTableComponent } from './components/edit-table/edit-table.component';
 import { InlineDatepickerComponent } from './components/inline-datepicker/inline-datepicker.component';
 import { DataTableRoutingModule } from './data-table.routes';
 
@@ -25,7 +26,8 @@ import { DataTableRoutingModule } from './data-table.routes';
     DialogEditComponent,
     DialogBoxComponent,
     DynaTableComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    EditTableComponent
   ],
   imports: [
     CommonModule,

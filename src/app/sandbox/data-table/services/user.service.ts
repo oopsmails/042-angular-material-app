@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { forkJoin, Observable } from 'rxjs';
 
 import { map } from 'rxjs/operators';
-import { User } from './user';
+import { User } from '../model/user';
 
 @Injectable({
   providedIn: 'root',

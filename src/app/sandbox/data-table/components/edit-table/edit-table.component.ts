@@ -1,16 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
-import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
-import { User, UserColumns } from '../../model/user';
+import { UserColumns, User } from '../../model/user';
 import { UserService } from '../../services/user.service';
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 @Component({
-  selector: 'app-dyna-table',
-  templateUrl: './dyna-table.component.html',
-  styleUrls: ['./dyna-table.component.scss']
+  selector: 'app-edit-table',
+  templateUrl: './edit-table.component.html',
+  styleUrls: ['./edit-table.component.scss']
 })
-export class DynaTableComponent {
+export class EditTableComponent {
   displayedColumns: string[] = UserColumns.map((col) => col.key);
   columnsSchema = UserColumns;
   dataSource = new MatTableDataSource<User>();
