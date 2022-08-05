@@ -249,7 +249,7 @@ https://www.freakyjolly.com/angular-material-table-inline-datepicker-edit-mode-t
 ng g c components/inline-datepicker
 
 
-![inline date picker](README-img\data-table\angular-material-datePicker.gif)
+![inline-date-picker](README-img\data-table\angular-material-datePicker.gif)
 
 > Angular 10|9|8 Edit/ Add/ Delete Rows in Material Table with using Dialogs inline Row Operation
 
@@ -260,7 +260,7 @@ ng g c components/dialog-edit
 ng g c components/dialog-box
 ```
 
-![edit using dialog](README-img\data-table\angular-material-table-update-using-dialog.gif)
+![edit-using-dialog](README-img\data-table\angular-material-table-update-using-dialog.gif)
 
 > EdiTable — An editable table using Angular Material
 
