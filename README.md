@@ -228,27 +228,6 @@ Note: All properties from the ValidProps list must be present when assigning the
 
 cd /c/sharing/github/angular-material-app/src/app/sandbox/data-table
 
-> Angular Material 13 Table Inline Datepicker Edit Mode Tutorial
-
-https://www.freakyjolly.com/angular-material-table-inline-datepicker-edit-mode-tutorial/
-
-ng g c components/inline-datepicker
-
-
-![inline date picker](README-img\data-table\Angular-Material-Table-Inline-Edit-datePicker.gif)
-
-> Angular 10|9|8 Edit/ Add/ Delete Rows in Material Table with using Dialogs inline Row Operation
-
-https://www.freakyjolly.com/angular-material-table-operations-using-dialog/
-
-```
-ng g c components/dialog-edit  
-ng g c components/dialog-box
-```
-
-![edit using dialog](README-img\data-table\angular-material-table-row-add-update-delete-using-dialog-example.gif)
-
-
 > Create an Editable Dynamic Table using Angular Material
 
 https://muhimasri.com/blogs/create-an-editable-dynamic-table-using-angular-material/  
@@ -261,6 +240,27 @@ ng g c components/confirm-dialog
 ```
 
 ![inline edit](README-img/data-table/angular-material-dyna-table.png)
+
+
+> Angular Material 13 Table Inline Datepicker Edit Mode Tutorial
+
+https://www.freakyjolly.com/angular-material-table-inline-datepicker-edit-mode-tutorial/
+
+ng g c components/inline-datepicker
+
+
+![inline date picker](README-img\data-table\angular-material-datePicker.gif)
+
+> Angular 10|9|8 Edit/ Add/ Delete Rows in Material Table with using Dialogs inline Row Operation
+
+https://www.freakyjolly.com/angular-material-table-operations-using-dialog/
+
+```
+ng g c components/dialog-edit  
+ng g c components/dialog-box
+```
+
+![edit using dialog](README-img\data-table\angular-material-table-update-using-dialog.gif)
 
 > EdiTable — An editable table using Angular Material
 
